@@ -1,0 +1,43 @@
+PortSystem     1.0
+name           oxford-softeng-latex
+version        1.0
+categories     tex
+maintainers    dcreager.net:dcreager
+description    Various LaTeX packages used by the Oxford University \
+               Software Engineering Programme
+homepage       http://devel.softeng.ox.ac.uk/
+
+master_sites   http://www.dcreager.net/download/
+distname       oxford-softeng-${version}
+extract.mkdir  yes
+checksums      md5  9713c07ad86acc737876fc6ace5e242a \
+               sha1 b201cb610514c132a7a2e1664c4f4f5724def347
+
+configure      {}
+build          {}
+
+destroot {
+  set latex_dir   ${destroot}${prefix}/share/texmf-local/tex/latex/oxford-softeng
+  set doc_dir     ${destroot}${prefix}/share/doc/${name}
+
+  file mkdir ${latex_dir}
+  file mkdir ${doc_dir}
+
+  file copy  ${worksrcpath}/csp.sty       ${latex_dir}
+  file copy  ${worksrcpath}/zed.sty       ${latex_dir}
+  file copy  ${worksrcpath}/psenotes.cls  ${latex_dir}
+  file copy  ${worksrcpath}/pseslide.cls  ${latex_dir}
+  file copy  ${worksrcpath}/sepbook.cls   ${latex_dir}
+  file copy  ${worksrcpath}/sepnotes.cls  ${latex_dir}
+  file copy  ${worksrcpath}/sepslide.cls  ${latex_dir}
+
+  file copy  ${worksrcpath}/csp.tex       ${doc_dir}
+  file copy  ${worksrcpath}/sepslide.tex  ${doc_dir}
+  file copy  ${worksrcpath}/sepslide.ps   ${doc_dir}
+  file copy  ${worksrcpath}/sepslide.pdf  ${doc_dir}
+  file copy  ${worksrcpath}/zed.tex       ${doc_dir}
+}
+
+post-activate  { system "mktexlsr" }
+
+universal_variant    no
