@@ -2,3 +2,5 @@ protobuf-c 602
 variants universal depends_build port:autoconf variant_desc {universal {Build for multiple architectures}} portdir devel/protobuf-c description {Pure C code generator and runtime libraries for Protocol Buffers} homepage http://code.google.com/p/protobuf-c/ epoch 0 platforms darwin name protobuf-c depends_lib port:protobuf-cpp maintainers landonf long_description {This package provides a code generator and runtime libraries to use Protocol Buffers from pure C (not C++). Library ABI and API compatibility changes are expected until version 1.0 is released.} categories devel version 0.10 revision 0
 rb-rake-latex 202
 portdir ruby/rb-rake-latex description {rake rules for build LaTeX documents} name rb-rake-latex depends_lib port:ruby version 0.5.4 categories ruby revision 0 epoch 0 maintainers dcreager.net:dcreager
+entcs-latex 205
+portdir tex/entcs-latex description {LaTeX2e macros for ENTCS publications} name entcs-latex version 1.15 categories tex homepage http://www.entcs.org/ revision 0 epoch 0 maintainers dcreager.net:dcreager

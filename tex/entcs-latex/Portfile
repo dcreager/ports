@@ -1,0 +1,52 @@
+PortSystem     1.0
+name           entcs-latex
+version        1.15
+categories     tex
+maintainers    dcreager.net:dcreager
+description    LaTeX2e macros for ENTCS publications
+homepage       http://www.entcs.org/
+
+master_sites   http://www.entcs.org/
+distname       generic
+worksrcdir     ${name}-${version}
+extract.mkdir  yes
+use_zip        yes
+checksums      md5  3c66d9e060ad66bde2c0816d528e69fc \
+               sha1 9a830a6860baeed189b5b78d08eadf15128723ae
+
+configure      {}
+build          {}
+
+destroot {
+  set latex_dir   ${destroot}${prefix}/share/texmf-local/tex/latex/entcs
+  set bibtex_dir  ${destroot}${prefix}/share/texmf-local/bibtex/bst/entcs
+  set doc_dir     ${destroot}${prefix}/share/doc/${name}
+
+  file mkdir ${latex_dir}
+  file mkdir ${bibtex_dir}
+  file mkdir ${doc_dir}
+
+  file copy  ${worksrcpath}/generic/entcsmacro.sty  ${latex_dir}
+  file copy  ${worksrcpath}/generic/entcs.cls       ${latex_dir}
+  file copy  ${worksrcpath}/generic/ascii.tab       ${latex_dir}
+
+  file copy  ${worksrcpath}/generic/entcs.bst       ${bibtex_dir}
+
+  file copy  ${worksrcpath}/generic/readme.first    ${doc_dir}
+  file copy  ${worksrcpath}/generic/example.tex     ${doc_dir}
+  file copy  ${worksrcpath}/generic/example.dvi     ${doc_dir}
+  file copy  ${worksrcpath}/generic/example.pdf     ${doc_dir}
+  file copy  ${worksrcpath}/generic/examplpdf.tex   ${doc_dir}
+  file copy  ${worksrcpath}/generic/examplpdf.pdf   ${doc_dir}
+  file copy  ${worksrcpath}/generic/instr.ascii     ${doc_dir}
+  file copy  ${worksrcpath}/generic/instraut.dvi    ${doc_dir}
+  file copy  ${worksrcpath}/generic/instraut.ps.gz  ${doc_dir}
+  file copy  ${worksrcpath}/generic/chess.eps       ${doc_dir}
+  file copy  ${worksrcpath}/generic/chess.pdf       ${doc_dir}
+  file copy  ${worksrcpath}/generic/tigre.eps       ${doc_dir}
+  file copy  ${worksrcpath}/generic/tigre.pdf       ${doc_dir}
+}
+
+post-activate  { system "mktexlsr" }
+
+universal_variant    no
