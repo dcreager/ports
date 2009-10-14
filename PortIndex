@@ -1,6 +1,8 @@
+graffle-export 197
+portdir graphics/graffle-export description {Command-line exporter for OmniGraffle figures} name graffle-export version 0.5 categories graphics revision 0 epoch 0 maintainers dcreager.net:dcreager
 rb-rake-latex 202
-portdir ruby/rb-rake-latex description {rake rules for build LaTeX documents} name rb-rake-latex depends_lib port:ruby version 0.5.4 categories ruby revision 0 epoch 0 maintainers dcreager.net:dcreager
-entcs-latex 205
-portdir tex/entcs-latex description {LaTeX2e macros for ENTCS publications} name entcs-latex version 1.15 categories tex homepage http://www.entcs.org/ revision 0 epoch 0 maintainers dcreager.net:dcreager
+description {rake rules for build LaTeX documents} portdir ruby/rb-rake-latex epoch 0 depends_lib port:ruby name rb-rake-latex maintainers dcreager.net:dcreager categories ruby version 0.5.4 revision 0
+entcs-latex 237
+portdir tex/entcs-latex description {LaTeX2e macros for ENTCS publications} homepage http://www.entcs.org/ epoch 0 name entcs-latex maintainers dcreager.net:dcreager depends_extract bin:unzip:unzip version 1.15 categories tex revision 0
 oxford-softeng-latex 277
-portdir tex/oxford-softeng-latex description {Various LaTeX packages used by the Oxford University Software Engineering Programme} name oxford-softeng-latex version 1.0 categories tex homepage http://devel.softeng.ox.ac.uk/ revision 0 epoch 0 maintainers dcreager.net:dcreager
+description {Various LaTeX packages used by the Oxford University Software Engineering Programme} portdir tex/oxford-softeng-latex homepage http://devel.softeng.ox.ac.uk/ epoch 0 name oxford-softeng-latex maintainers dcreager.net:dcreager categories tex version 1.0 revision 0

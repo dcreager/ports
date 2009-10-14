@@ -1,0 +1,28 @@
+PortSystem    1.0
+name          graffle-export
+version       0.5
+maintainers   dcreager.net:dcreager
+description   Command-line exporter for OmniGraffle figures
+license       GPL
+categories    graphics
+
+master_sites  http://download.dcreager.net/
+checksums     md5  2952a022d0fd662293971d7878712dc9
+
+universal_variant  no
+configure          {}
+build              {}
+
+destroot {
+  set bin_dir   ${destroot}${prefix}/bin
+  set doc_dir   ${destroot}${prefix}/share/doc/${name}
+
+  file mkdir ${bin_dir}
+  file mkdir ${doc_dir}
+
+  file copy  ${worksrcpath}/graffle.scpt  ${bin_dir}
+  file copy  ${worksrcpath}/graffle.sh    ${bin_dir}
+
+  file copy  ${worksrcpath}/README        ${doc_dir}
+  file copy  ${worksrcpath}/ChangeLog     ${doc_dir}
+}
