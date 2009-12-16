@@ -4,7 +4,7 @@ ruby.setup    rake-latex 0.5.4 setup.rb
 maintainers   dcreager.net:dcreager
 description   rake rules for build LaTeX documents
 
-master_sites  http://www.dcreager.net/download/
+master_sites  http://download.dcreager.net/
 checksums     md5  104ef31c7bd823603383403fb5ad3784 \
               sha1 853989db2fc4b2bff4bad62d63f874662e324f6d
 
