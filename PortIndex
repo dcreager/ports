@@ -1,3 +1,5 @@
+buddy 553
+variants universal depends_build {port:autoconf port:automake port:libtool} portdir devel/buddy description {A C/C++ Binary Decision Diagram (BDD) library} homepage http://sourceforge.net/projects/buddy/ epoch 0 platforms darwin name buddy long_description {A Binary Decision Diagram (BDD) library, with many highly efficient vectorized BDD operations, dynamic variable reordering, automated garbage collection, a C++ interface with automatic reference counting, and much more.} maintainers dcreager:dcreager.net categories devel version 2.4 revision 0
 graffle-export 197
 portdir graphics/graffle-export description {Command-line exporter for OmniGraffle figures} name graffle-export version 0.5 categories graphics revision 0 epoch 0 maintainers dcreager.net:dcreager
 rb-rake-latex 202
